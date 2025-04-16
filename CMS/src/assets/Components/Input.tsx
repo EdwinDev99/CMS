@@ -7,7 +7,8 @@ type Props = {
 };
 
 function Input({ children, name }: Props) {
-  const { register } = useFormContext();
+  const { register, formState, getFieldState } = useFormContext();
+  const { error } = getFieldState(name, formState);
   return (
     <div className="mb-3">
       <label htmlFor={name} className="form-label">
@@ -20,6 +21,7 @@ function Input({ children, name }: Props) {
         id={name}
         placeholder=""
       />
+      {error?.message && <div className="text-danger">{error?.message}</div>}
     </div>
   );
 }
