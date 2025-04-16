@@ -16,7 +16,7 @@ function CMS({}: Props) {
     setContacts(contacts.filter((c) => c.id != id));
   };
 
-  console.log(contacts);
+  // console.log(contacts);
 
   return (
     <div className="Container">

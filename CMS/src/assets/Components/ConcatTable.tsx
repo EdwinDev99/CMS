@@ -13,6 +13,7 @@ function ConcatTable({ contacts, onClick }: Props) {
           <th>Nombre</th>
           <th>Apellido</th>
           <th>Correo</th>
+          <th>Tipo</th>
         </tr>
       </thead>
       <tbody>
@@ -25,6 +26,7 @@ function ConcatTable({ contacts, onClick }: Props) {
             <td>{c.name}</td>
             <td>{c.lastname}</td>
             <td>{c.email}</td>
+            <td>{c.type}</td>
           </tr>
         ))}
       </tbody>
